@@ -10,6 +10,8 @@ export default function GuGuDan() {
   const [result, setResult] = useState("");
   const inputEl = useRef(null);
 
+  // setState들이 많이 일어나면 렌더가 그만큼 일어나나??
+  // 비동기라서 setState들을 모아서 한번에 처리해서 렌더를 한번만 하게함
   const onSubmit = (e) => {
     e.preventDefault();
     // 내가 쓴 값이 first * second  랑 같이면? 정답
@@ -33,6 +35,7 @@ export default function GuGuDan() {
   const onChange = (e) => {
     setValue(e.target.value);
   };
+
 
   return (
     <div>

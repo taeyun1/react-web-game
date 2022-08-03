@@ -20,6 +20,11 @@ export default function Nav() {
             숫자야구
           </Link>
         </li>
+        <li>
+          <Link to="wordrelay" className="link">
+            끝말잇기
+          </Link>
+        </li>
       </ul>
     </nav>
   );
