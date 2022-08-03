@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BaseBall from "./숫자야구/BaseBall";
+import { Routes, Route } from "react-router-dom";
+import Nav from "./Nav";
+import GuGuDan from "./구구단/GuGuDan";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <Routes>
+        {/* <Route path="/" element={<Nav />} /> */}
+        <Route path="gugudan" element={<GuGuDan />} />
+        <Route path="baseball" element={<BaseBall />} />
+      </Routes>
+    </>
   );
 }
 
